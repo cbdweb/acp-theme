@@ -1,0 +1,162 @@
+/*
+Theme Name: Simple Block
+Author: Nik Dow
+Author URI: http://www.cbdweb.net
+Description: A simple block of colour with a menu above.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: simple block
+Text Domain: simpleblock
+*/
+$menuFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$defaultFonts: 'Quattrocento',Georgia,"Times New Roman",Times,serif;
+$headerColor: #1e347e;
+$fontColor: rgb(2, 3, 6);
+$reversalColor: #CCF;
+html, body {
+    height: 100%;
+}
+body {
+    font: 400 16px/22px $defaultFonts;
+    margin: 0;
+    padding: 0;
+    color: $fontColor;
+}
+div#page { // https://css-tricks.com/snippets/css/sticky-footer/
+    min-height: 100%;
+    margin: -14px 0 -56px;
+    font: inherit;
+    font-size: 100%;
+}
+div.menu-header-menu-container {
+    margin-top: 20px;
+}
+ul#menu-header-menu, ul#menu-footer-menu, div#copyright {
+    font-family: $menuFonts;
+    font-size: 90%;
+    >li {
+        float: left;
+        list-style-type: none;
+        margin-right: 20px;
+        &.current-menu-item {
+            font-weight: bold;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $fontColor;
+        &:hover {
+            font-style: italic;
+        }
+    }
+}
+div.menu-footer-menu-container, div.menu-header-menu-container {
+    margin: 0 0 0 20%;
+}
+ul#menu-footer-menu {
+    margin: 0;
+    a {
+       color: $reversalColor;
+    }
+}
+div.menu-header-menu-container>ul>li {
+    margin-top: 10px;
+}
+
+.clearall {
+    clear: both;
+}
+h1 {
+    font-size: 140%;
+    font-weight: bold;    
+}
+h1.site-title {
+    height: 50px;
+    background-color: $headerColor;
+    background-image: url(/wp-content/uploads/2015/11/avenuelogotrans1.png);
+    background-repeat: no-repeat;
+    background-position: 30% 22px;
+    text-indent: -9999px;
+    padding: 20px 0;
+    margin: 10px 0 0 0;
+    color: white;
+}
+h2 {
+    font-size: 130%;
+    font-weight: bold;
+    font-family: $menuFonts;
+}
+h2.site-description {
+    height: 50px;
+    background-color: $headerColor;
+    margin: 0 0px 10px 0;
+/*    padding: 20px 0 0px 0; */
+    text-indent: 70%;
+    color: $reversalColor;
+}
+@media only screen and (max-width: 700px) {
+    h2.site-description {
+        text-indent: 30%;
+    }
+}
+h3 {
+    font-size: 120%;
+    font-weight: bold;
+}
+h4 {
+    font-size: 110%;
+    font-weight: bold;
+}
+div#content  {
+    max-width: 1000px;
+    margin: 100px auto;
+    font: inherit;
+    font-size: 100%;
+}
+div#primary {
+    margin: 0 20px;
+}
+img.featured-image {
+    float: left;
+    margin: 0 50px 50px 0;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 6px 6px 2px 1px #999;
+}
+div.gallery img {
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 6px 6px 2px 1px #999;
+}
+img.alignright {
+    float: right;
+    margin: 0 0 15px 15px;
+}
+
+
+img.alignleft {
+    float: left;
+    margin: 0 15px 15px 0;
+}
+
+
+p {
+    font-size: 100%;
+    font-family: inherit;
+}
+div#footer {
+    font-size: 90%;
+    font-weight: normal;
+    background-color: $headerColor;
+    padding: 5px 0 31px 0;
+    margin: 20px 0 0 0;
+    color: $reversalColor;
+}
+div#copyright {
+    float: right;
+    margin-right: 20px;
+    a {
+        color: $reversalColor;
+    }
+}
